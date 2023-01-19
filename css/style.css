@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Barlow";
+    src: url("Barlow-Regular.woff2") format("woff2"),
+    url("Barlow-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url("Barlow-Bold.woff2") format("woff2"),
+    url("Barlow-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* VARIABLES */
 
 :root {
@@ -32,7 +51,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /* font-family: "Roboto", "Arial", sans-serif; */
+    font-family: "Barlow", "Arial", sans-serif;
 }
 
 .visually-hidden {
@@ -51,15 +70,117 @@ body {
 /* CONTAINER */
 
 .container {
-    /* max-width: YOUR CONTAINER MAX-WIDTH PX HERE; */
+    width: 100%;
+    max-width: 1240px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 
 /* STICKY - FOOTER */
 
 .site-main {
     flex-grow: 1;
+}
+.site-header {
+    position: relative;
+    z-index: 1;
+    padding: 32px 0 42px 0;
+}
+.site-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img {
+    width: 163px;
+    height: 18px;
+}
+.site-header__burger-menu {
+    width: 16px;
+    height: 15px;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../images/mobile_nav.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+.sitenav {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+    height: 100vh;
+    background: linear-gradient(360deg, rgba(254, 252, 247, 0.504981) 0%, #fefcf7 55.94%);
+}
+.sitenav-open .sitenav{
+    display: block;
+}
+.sitenav-open .site-header__burger-menu {
+    background-image: url("../images/exit_icon.svg");
+}
+.sitenav-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+}
+.sitenav-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.sitenav-link {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333d4b;
+    text-decoration: none;
+}
+@media only screen and (min-width: 648px){
+    .logo-img {
+        width: 236px;
+        height: 26px;
+    }
+    .site-header__burger-menu {
+        display: none;
+    }
+    .sitenav {
+        display: block;
+        position: static;
+        height: auto;
+        background: transparent;
+    }
+    .sitenav-list {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
+    }
+    .sitenav-item:not(:last-child) {
+        margin-right: 32px;
+        margin-bottom: 0;
+    }
+    .sitenav-link {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.923077px;
+        text-transform: uppercase;
+        color: #83888f;
+    }
+}
+@media only screen and (min-width: 820px){
+    .container {
+        padding: 0 40px;
+        
+    }
 }
