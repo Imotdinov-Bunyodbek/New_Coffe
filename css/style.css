@@ -59,6 +59,7 @@ body {
     padding: 0;
     font-family: "Barlow", "Arial", sans-serif;
     font-family: "Fraunces 9pt", "Times New Roman", serif;
+    background-color: var(--main-bg-color);
 }
 
 .visually-hidden {
@@ -205,6 +206,54 @@ body {
 .hero-link:hover {
     background-color: #66d2cf;
 }
+.collection-box {
+    margin-top: 120px;
+    background-image: url("../images/collection_mobile.png");
+    background-repeat: no-repeat;
+    background-size: 375px 72px;
+    background-position: top center;
+}
+.collection-list {
+    list-style: none;
+    padding: 0;
+    padding-top: 85px;
+}
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collection-item:not(:last-child) {
+    margin-bottom: 48px;
+}
+.danche-img {
+    padding-left: 20px;
+    padding-top: 15px;
+}
+.collection-item-headding-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collection-item-title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--main-text-color-black);
+    margin-bottom: 16px;
+}
+.collection-item-text {
+    width: 282px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--main-text-color-black);
+}
 @media only screen and (min-width: 640px){
     .logo-img {
         width: 236px;
@@ -253,7 +302,28 @@ body {
         max-width: 400px;
         text-align: start;
     }
-
+    .collection-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 144.2px;
+        background-image: url("../images/collection_tablet.png");
+        background-size: 698px 118px;
+    }
+    .collection-list {
+        padding-top: 59px;
+    }
+    .collection-item {
+        display: flex;
+        flex-direction: row;
+    }
+    .collection-item-headding-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .collection-item-text {
+        text-align: start;
+    }
 }
 @media only screen and (min-width: 820px){
     .container {
@@ -269,5 +339,42 @@ body {
     }
     .hero-text {
         max-width: 400px;
+    }
+    .collection-box {
+        display: flex;
+        justify-content: center;
+        background-image: url("../images/collection_destkop.png");
+        background-size: 1111px 196px;
+        margin-top: 136px;
+    }
+    .collection-list {
+        display: flex;
+        padding: 0;
+    }
+    .collection-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 126px;
+        margin-bottom: 0;
+    }
+    .collection-item:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+    .collection-img-box {
+        margin-bottom: 71.55px;
+    }
+    .collection-item-headding-box {
+        align-items: center;
+    }
+    .collection-item-title {
+        margin-bottom: 24px;
+    }
+    .collection-item-text {
+        width: 255px;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
     }
 }
