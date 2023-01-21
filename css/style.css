@@ -30,6 +30,7 @@
     --main-text-color-black : #333d4b;
     --main-bg-color : #fefcf7;
     --main-btn-color-grin: #0e8784;
+    --main-section-color: #2c343e;
 }
 
 /* GENERAL */
@@ -262,7 +263,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--main-text-color-black);
+    background-color: var(--main-section-color);
     padding-top: 56px;
     position: relative;
     margin-top: 120px;
@@ -404,7 +405,7 @@ body {
     margin-bottom: 24px;
 }
 .works-item-text {
-    width: 327px;
+    max-width: 327px;
     font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
@@ -412,6 +413,54 @@ body {
     line-height: 25px;
     text-align: center;
     color: var(--main-text-color-black);
+}
+.footer-box {
+    max-width: 327px;
+    min-height: 346px;
+    background-color: var(--main-section-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.site-footer-logo-link {
+    text-decoration: none;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.footer-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+.footer-link {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+    color: var(--main-nav-color-grey);
+    text-decoration: none;
+}
+.footer-link:active {
+    color: var(--main-bg-color);
+}
+.footer-social-link {
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+.footer-social-link:active {
+    color: #fdd6ba;
+}
+.footer-social-link:not(:last-child) {
+    margin-right: 24px;
 }
 @media only screen and (min-width: 640px){
     .logo-img {
@@ -582,6 +631,19 @@ body {
         text-align: start;
         margin-bottom: 0;
     }
+    .footer-box {
+        max-width: 688px;
+        min-height: 270px;
+        margin-top: 144px;
+    }
+    .footer-list {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .footer-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 33px;
+    }
 }
 @media only screen and (min-width: 820px){
     .container {
@@ -678,7 +740,6 @@ body {
         line-height: 26px;
         text-align: center;
     }
-    /* work */
     .works-box {
         margin-top: 351px;
     }
@@ -720,5 +781,12 @@ body {
         max-width: 285px;
         font-size: 16px;
         line-height: 26px;
+    }
+    .footer-box {
+        max-width: 1280px;
+        min-height: 120px;
+        flex-direction: row;
+        margin-top: 200px;
+        margin-bottom: 88px;
     }
 }
